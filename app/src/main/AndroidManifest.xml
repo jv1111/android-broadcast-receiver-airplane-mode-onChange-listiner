@@ -22,7 +22,21 @@
             </intent-filter>
         </activity>
 
+        <receiver
+            android:name=".MyBroadcastReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.CUSTOM_ACTION"/>
+            </intent-filter>
+        </receiver>
 
+        <receiver
+            android:name=".BroadcastReceiverPlane"
+            android:exported="true">  <!-- Required for Android 12+ -->
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+            </intent-filter>
+        </receiver>
 
     </application>
 
